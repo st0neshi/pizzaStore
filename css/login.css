@@ -87,10 +87,14 @@ input[type="button"]:hover {
     padding: 50px;
     text-align: center;
     color: white;
-    border-radius: 22px;
+    border-radius: 5px;
 
     -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.login i {
+  font-size: 50px;
 }
 
 .login input {
@@ -122,6 +126,7 @@ input[type="button"]:hover {
     transition: 0.5s;
     -webkit-animation: jello-horizontal 0.9s both;
     animation: jello-horizontal 0.9s both;
+    cursor: pointer;
 }
 
 .bot_content {

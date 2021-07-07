@@ -15,6 +15,7 @@ body {
     font-size: 25px;
     color: white;
     margin: 10px;
+    cursor: pointer;
 }
 
 a {
@@ -179,6 +180,71 @@ input[type="button"]:hover {
     background-color: orange;
 }
 
+.popup {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex; /*control the popup page off/on*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.popup_content {
+    width: 400px;
+    background: orange;
+    padding: 40px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.popup_content .fa-user {
+    font-size: 50px;
+}
+
+.popup_content .fa-times {
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    cursor: pointer;
+}
+
+.popup_content .fa-times:hover {
+	-webkit-animation: rotate-center 0.6s ease-in-out both;
+	animation: rotate-center 0.6s ease-in-out both;
+}
+
+.popup_content input {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 12px;
+    background: none;
+    border-radius: 22px;
+    outline: none;
+    color: white;
+    border: 2px solid white;
+    width: 150px;
+}
+
+.popup_content input[type="text"]:hover, .popup_content input[type="password"]:hover {
+    width: 230px;
+    transition: 0.5s;
+}
+
+.popup_content input[type="submit"]:hover {
+    color: orange;
+    background-color: white;
+    transition: 0.5s;
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+    cursor: pointer;
+}
+
 /*jello*/
 @-webkit-keyframes jello-horizontal {
     0% {
@@ -284,3 +350,26 @@ input[type="button"]:hover {
               box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.35);
     }
 }
+
+/*rotate right*/
+@-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+}
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+}
+  
