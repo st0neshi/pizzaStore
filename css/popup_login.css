@@ -1,0 +1,87 @@
+.login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 10;
+    background-color: orange;
+    width: 400px;
+    max-width: 700px;
+    padding: 50px;
+}
+
+.login.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.login .login_box {
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.login #login_close:hover {
+	-webkit-animation: rotate-center 0.6s ease-in-out both;
+	animation: rotate-center 0.6s ease-in-out both;
+}
+
+.login .fa-user {
+    font-size: 50px;
+}
+
+.login #login_close {
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    cursor: pointer;
+    background: none;
+    border: none
+}
+
+.login input {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 12px;
+    background: none;
+    border-radius: 22px;
+    outline: none;
+    color: white;
+    border: 2px solid white;
+    width: 150px;
+}
+
+.login input[type="text"]:hover, .login input[type="password"]:hover {
+    width: 230px;
+    transition: 0.5s;
+}
+
+.login input[type="submit"]:hover {
+    color: orange;
+    background-color: white;
+    transition: 0.5s;
+    -webkit-animation: jello-horizontal 0.9s both;
+    animation: jello-horizontal 0.9s both;
+    cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}

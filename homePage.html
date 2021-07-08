@@ -7,6 +7,8 @@
 
         <link rel="stylesheet" href="css/homePage.css" />
         <link rel="stylesheet" href="css/font_awesome/css/all.css" />
+        <link rel="stylesheet" href="css/popup_login.css" />
+        <link rel="stylesheet" href="css/myAnimation.css" />
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" 
             rel="stylesheet">
         <script src="../pizzaStore/js/main.js"></script>
@@ -18,8 +20,8 @@
                 <p class="my_title">Shizza</p>
 
                 <div class="shop">
-                    <span class="material-icons-outlined" id="person">person_outline</span>
-                    <span class="material-icons-outlined" id="cart">shopping_cart</span>
+                    <button data_login_target="#login" class="material-icons-outlined" id="person">person_outline</button>
+                    <butoon class="material-icons-outlined" id="cart">shopping_cart</button>
                 </div>
             
                 <div class="navi">
@@ -81,7 +83,7 @@
                 <p style="text-align: center; color: white;">@Made by Hongwei Shi</p>
             </div>
         </div>
-        <div class="popup">
+        <!-- <div class="popup">
             <div class="popup_content">
                 <span class="material-icons-outlined" id="close">close</span>
                 <i class="fas fa-user"></i>
@@ -89,6 +91,16 @@
                 <input type="password" placeholder="Password" />
                 <input type="submit" value="Submit" />
             </div>
+        </div> -->
+        <div class="login" id="login">
+            <div class="login_box">
+                <button data_close_button class="material-icons-outlined" id="login_close">close</button>
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <input type="submit" value="Submit" />
+            </div>
         </div>
+        <div id="overlay"></div>
     </body>
 </html>
