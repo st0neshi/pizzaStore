@@ -6,26 +6,29 @@ body {
 
 .main_content .shop {
     position: absolute;
-    margin-top: -50px;
+    margin-top: -40px;
     margin-right: 20px;
     right: 0px;
-}
-
-.shop i {
-    font-size: 25px;
     color: white;
-    margin: 10px;
-    cursor: pointer;
 }
 
 a {
     text-decoration: none;
 }
 
-.shop i:hover {
+.shop .material-icons-outlined:hover {
     -webkit-animation: jello-horizontal 0.9s both;
     animation: jello-horizontal 0.9s both;
 } 
+
+#cart, #person {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#person {
+    margin-right: 5px;
+}
 
 .top_content {
     background-color: orange;
@@ -169,7 +172,7 @@ input[type="button"]:hover {
 
 .news:hover {
     -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .bot_content {
@@ -205,15 +208,15 @@ input[type="button"]:hover {
     font-size: 50px;
 }
 
-.popup_content .fa-times {
+.popup_content #close {
     font-size: 30px;
     position: absolute;
     top: 0;
-    right: 3px;
+    right: 0px;
     cursor: pointer;
 }
 
-.popup_content .fa-times:hover {
+.popup_content #close:hover {
 	-webkit-animation: rotate-center 0.6s ease-in-out both;
 	animation: rotate-center 0.6s ease-in-out both;
 }
