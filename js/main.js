@@ -6,32 +6,39 @@
 //     document.querySelector(".popup").style.display = "none";
 // })
 
-const openLoginButtons = document.querySelectorAll("[data_login_target]");
-const closeLoginButtons = document.querySelectorAll("[data_close_button]");
-const overlay = document.getElementById("overlay");
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
 
-openLoginButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const login = document.querySelector(button.dataset.loginTarget)
-        openLogin(login)
-    })
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
 })
 
-closeLoginButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const login = button.closest(".login")
-        closeLogin(login)
-    })
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
 })
 
-function openLogin(login) {
-    if (login == null) return
-    login.classList.add("active")
-    overlay.classList.add("active")
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
 }
 
-function closeLogin(login) {
-    if (login == null) return
-    login.classList.remove("active")
-    overlay.classList.remove("active")
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
 }
